@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:each="list:${article}">
+<form th:action="@{'/index' + '/article/' + ${list?.id}}">
+<div><div style=" display:inline;">文章标题 :</div> <div style=" display:inline;"><input name="title" th:value="${list.title}"/></div></div>
+<div><div style=" display:inline;">文章内容 :</div> <div style=" display:inline;"><input name="content" th:value="${list.content}"/></div></div>
+<div><div style=" display:inline;">文章标签 :</div> <div style=" display:inline;" th:each="tag:${list.tag}"><input name="tag" th:value="${tag}"/></div></div>
+<div><input type="button" value="修改" class="article_update"></div>
+</form>
+</div>
+
+</body>
+<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+<script th:src="@{/js/admin.js}"></script>
+</html>

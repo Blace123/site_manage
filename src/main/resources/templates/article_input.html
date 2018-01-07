@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/index/article/inputs}" method="post">
+<div><p>请输入您文章的标题</p><input type="text" name="title"/></div>
+<div><p>请输入您文章的内容</p><input type="text" name="content"/></div>
+<div><p>请输入您文章的标签</p><input type="text" name="tag"/><input type="text" name="tag"/><input type="text" name="tag"/></div>
+<a href="javascript:void(0);" class="article_input">input</a>
+</form>
+</body>
+<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+<script th:src="@{/js/admin.js}"></script>
+</html>
